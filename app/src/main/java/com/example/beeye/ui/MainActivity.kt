@@ -14,5 +14,9 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+
+        if (savedInstanceState == null) {
+            binding.bottomNavigationView.selectedItemId = R.id.fragment_home
+        }
     }
 }
