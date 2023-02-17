@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/yellow"
-    tools:context=".ui.view.HomeFragment">
+    tools:context=".ui.view.home.HomeFragment">
     <TextView
         android:id="@+id/txt_main_language"
         android:layout_width="320dp"
@@ -26,7 +26,7 @@
         android:id="@+id/btn_main_record"
         android:layout_width="320dp"
         android:layout_height="80dp"
-        android:background="@drawable/bd_home_btn"
+        android:background="@drawable/bd_common_btn"
         android:text="@string/home_btn_record"
         android:textColor="@color/yellow"
         android:textSize="30sp"
@@ -40,7 +40,7 @@
         android:id="@+id/btn_main_camera"
         android:layout_width="320dp"
         android:layout_height="80dp"
-        android:background="@drawable/bd_home_btn"
+        android:background="@drawable/bd_common_btn"
         android:text="@string/home_btn_camera"
         android:textColor="@color/yellow"
         android:textSize="30sp"
@@ -55,7 +55,7 @@
         android:id="@+id/btn_main_gallery"
         android:layout_width="320dp"
         android:layout_height="80dp"
-        android:background="@drawable/bd_home_btn"
+        android:background="@drawable/bd_common_btn"
         android:text="@string/home_btn_gallery"
         android:textColor="@color/yellow"
         android:textSize="30sp"
