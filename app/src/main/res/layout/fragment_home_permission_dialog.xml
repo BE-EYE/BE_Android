@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bd_common_btn"
-    tools:context=".ui.view.home.HomeCameraPermissionDialog">
+    tools:context=".ui.view.home.HomePermissionDialog">
 
     <TextView
         android:id="@+id/dialog_camera_txt"
@@ -14,11 +14,11 @@
         android:textColor="@color/yellow"
         android:layout_marginTop="30dp"
         android:gravity="center"
+        android:text="@string/dialog_permission"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@id/dialog_camera_btn"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:text="@string/dialog_camera_permission" />
+        app:layout_constraintRight_toRightOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/dialog_camera_btn"
@@ -31,6 +31,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp"
+        android:gravity="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

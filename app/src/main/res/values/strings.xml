@@ -10,7 +10,7 @@
     <string name="home_btn_gallery">이미지</string>
 
     <!-- 다이얼로그   -->
-    <string name="dialog_camera_permission"><b>카메라</b>를 활용하려면 \n 해당 권한이 필요합니다!🙇‍</string>
+    <string name="dialog_permission">해당 기능을 활용하려면 <b>권한</b>이 필요합니다!🙇‍</string>
     <string name="dialog_btn_yes">확인</string>
 
 </resources>
