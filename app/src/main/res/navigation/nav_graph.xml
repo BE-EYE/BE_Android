@@ -17,7 +17,7 @@
         tools:layout="@layout/fragment_archive" />
     <fragment
         android:id="@+id/fragment_home"
-        android:name="com.example.beeye.ui.view.HomeFragment"
+        android:name="com.example.beeye.ui.view.home.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" />
 </navigation>

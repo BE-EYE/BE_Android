@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/bd_common_btn"
-    tools:context=".ui.view.home.HomePermissionDialog">
+    tools:context=".ui.view.home.HomeCameraPermissionDialog">
 
     <TextView
         android:id="@+id/dialog_camera_txt"

@@ -1,8 +1,7 @@
-package com.example.beeye.ui.view
+package com.example.beeye.ui.view.home
 
 import android.app.Activity.RESULT_OK
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.provider.MediaStore
 import android.util.Log
@@ -10,12 +9,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.beeye.R
 import com.example.beeye.databinding.FragmentHomeBinding
-import java.net.URL
 
 class HomeFragment : Fragment() {
     private var _binding: FragmentHomeBinding? = null
@@ -23,7 +18,7 @@ class HomeFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -44,15 +39,17 @@ class HomeFragment : Fragment() {
             val intent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
             imageCaptureLauncher.launch(intent)
         }else {
-            Toast.makeText(requireContext(), "해당 기능은 카메라 권한이 필요합니다!", Toast.LENGTH_SHORT).show()
+            HomeCameraPermissionDialog().show( requireActivity().supportFragmentManager,"HomePermissionDialog")
         }
     }
 
     private val imageCaptureLauncher = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()) {
         if (it.resultCode == RESULT_OK) {
-            val bitmap = it.data?.extras
+            //deprecated 처리 필요
+            val bitmap = it.data?.extras?.get("data")
             Log.d("bitmap", bitmap.toString())
+            //요약 페이지로 전환 필요
         }
     }
 

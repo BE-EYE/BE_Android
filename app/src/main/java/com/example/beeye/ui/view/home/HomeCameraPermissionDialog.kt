@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.beeye.R
 import com.example.beeye.common.base.BaseDialog
-import com.example.beeye.databinding.FragmentHomePermissionDialogBinding
+import com.example.beeye.databinding.FragmentHomeCameraPermissionDialogBinding
 
-class HomePermissionDialog : BaseDialog<FragmentHomePermissionDialogBinding>(R.layout.fragment_home_permission_dialog) {
+class HomeCameraPermissionDialog : BaseDialog<FragmentHomeCameraPermissionDialogBinding>(R.layout.fragment_home_camera_permission_dialog) {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -22,5 +22,5 @@ class HomePermissionDialog : BaseDialog<FragmentHomePermissionDialogBinding>(R.l
         return binding.root
     }
 
-    override fun getViewBinding() = FragmentHomePermissionDialogBinding.inflate(layoutInflater)
+    override fun getViewBinding() = FragmentHomeCameraPermissionDialogBinding.inflate(layoutInflater)
 }
