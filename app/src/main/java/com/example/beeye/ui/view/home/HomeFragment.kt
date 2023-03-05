@@ -40,6 +40,7 @@ class HomeFragment : Fragment() {
         homeViewModel.setFragmentActivity(requireActivity())
         homeViewModel.checkFile("kor")
         homeViewModel.checkFile("eng")
+        homeViewModel.setTesseract()
 
         binding.btnMainCamera.setOnClickListener {
             requestCameraLauncher.launch(REQUIRED_CAMERA_PERMISSION)

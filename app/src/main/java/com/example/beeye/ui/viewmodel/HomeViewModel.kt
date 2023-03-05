@@ -19,6 +19,9 @@ class HomeViewModel(): ViewModel() {
 
     fun setFragmentActivity(activity: FragmentActivity) {
         fragmentActivity = activity
+    }
+
+    fun setTesseract() {
         ocrRepositoryImpl.setTess(dataPath, "kor+eng")
     }
 
