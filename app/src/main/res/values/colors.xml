@@ -11,4 +11,5 @@
     <color name="green">#4F7670</color>
     <color name="yellow">#F9F1E6</color>
     <color name="transparent">#000000</color>
+    <color name="stroke">#CCCCCC</color>
 </resources>

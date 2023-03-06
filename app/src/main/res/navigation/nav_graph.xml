@@ -5,19 +5,27 @@
     android:id="@+id/nav_graph"
     app:startDestination="@id/fragment_home">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.example.beeye.ui.view.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
     <fragment
         android:id="@+id/fragment_archive"
         android:name="com.example.beeye.ui.view.ArchiveFragment"
         android:label="fragment_archive"
         tools:layout="@layout/fragment_archive" />
     <fragment
+        android:id="@+id/fragment_radio"
+        android:name="com.example.beeye.ui.view.radio.RadioFragment"
+        android:label="@string/fragment_radio"
+        tools:layout="@layout/fragment_radio" />
+    <fragment
         android:id="@+id/fragment_home"
         android:name="com.example.beeye.ui.view.home.HomeFragment"
-        android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        android:label="@string/fragment_home"
+        tools:layout="@layout/fragment_home">
+        <action
+            android:id="@+id/action_homeFragment_to_radioFragment"
+            app:destination="@id/fragment_radio"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
 </navigation>

@@ -15,6 +15,8 @@ import android.view.ViewGroup
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.FileProvider
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import com.example.beeye.R
 import com.example.beeye.databinding.FragmentHomeBinding
 import com.example.beeye.ui.viewmodel.HomeViewModel
 import java.io.*
@@ -48,6 +50,10 @@ class HomeFragment : Fragment() {
 
         binding.btnMainGallery.setOnClickListener {
             requestGalleryLauncher.launch(REQUIRED_GALLERY_PERMISSION)
+        }
+
+        binding.btnMainRecord.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_radioFragment)
         }
     }
 

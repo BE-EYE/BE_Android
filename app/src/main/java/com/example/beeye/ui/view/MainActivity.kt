@@ -6,6 +6,7 @@ import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import com.example.beeye.R
@@ -22,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
         setupJetpackNavigation()
+        setupBottomNavigation()
     }
 
     private fun setupJetpackNavigation() {
@@ -36,5 +38,22 @@ class MainActivity : AppCompatActivity() {
             )
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
+    }
+
+    private fun setupBottomNavigation() {
+        binding.bottomNavigationView.setOnItemReselectedListener {
+            when(it.itemId) {
+                R.id.fragment_home -> {
+                    navController.popBackStack(navController.graph.startDestinationId, false)
+                }
+                R.id.fragment_archive -> {
+                    navController.popBackStack(R.id.fragment_archive, false)
+                }
+            }
+        }
     }
 }
