@@ -13,4 +13,11 @@
     <string name="dialog_permission">해당 기능을 활용하려면 <b>권한</b>이 필요합니다!🙇‍</string>
     <string name="dialog_btn_yes">확인</string>
 
+    <!--  음성  -->
+    <string name="radio_play">듣기</string>
+    <string name="radio_stop">멈춤</string>
+    <string name="radio_finish">종료</string>
+    <string name="radio_status_play">듣는 중..👂🏻</string>
+    <string name="radio_status_stop">듣기를 눌러 주세요!👂🏻</string>
+
 </resources>
